@@ -3295,7 +3295,7 @@ static struct device_attribute touchscreen_attributes[] = {
     __ATTR_RO(timestamp),
 #endif
 #ifdef CONFIG_BOARD_USES_DOUBLE_TAP_CTRL
-        __ATTR_RW(gesture),
+        __ATTR(gesture, S_IRUGO | S_IWUGO, gesture_show, gesture_store),
         __ATTR(double_tap_enabled, S_IRUGO | S_IWUSR | S_IWGRP, double_tap_enabled_show, double_tap_enabled_store),
 #endif
 #ifdef CTS_STOWED_MODE_EN

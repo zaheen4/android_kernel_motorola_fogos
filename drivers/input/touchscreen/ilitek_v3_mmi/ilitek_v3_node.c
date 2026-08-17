@@ -4220,7 +4220,7 @@ static struct device_attribute touchscreen_attributes[] = {
 	__ATTR_RO(timestamp),
 #endif
 #ifdef ILI_DOUBLE_TAP_CTRL
-	__ATTR(gesture, S_IRUGO | S_IWUSR | S_IWGRP, gesture_show, gesture_store),
+	__ATTR(gesture, S_IRUGO | S_IWUGO, gesture_show, gesture_store),
 	__ATTR(gesture_type_dbg, S_IRUGO | S_IWUSR | S_IWGRP, gesture_type_dbg_show, gesture_type_dbg_store),
 	__ATTR(double_tap_enabled, S_IRUGO | S_IWUSR | S_IWGRP, double_tap_enabled_show, double_tap_enabled_store),
 	__ATTR(single_tap_enabled, S_IRUGO | S_IWUSR | S_IWGRP, single_tap_enabled_show, single_tap_enabled_store),
